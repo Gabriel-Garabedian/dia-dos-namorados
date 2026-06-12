@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Victoria & Gabriel — Nossa História</title>
+  <meta name="description" content="Uma carta digital de amor para Victoria, de Gabriel. Nossa história, nossas memórias, nosso amor." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Para Victoria, com amor de Gabriel" />
+  <meta property="og:description" content="Uma carta digital permanente — nossa história de amor." />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-theme="light">
+
+  <!-- ░░ LOADER ░░ -->
+  <div id="loader" aria-hidden="true">
+    <div class="loader-heart">
+      <svg viewBox="0 0 100 90" xmlns="http://www.w3.org/2000/svg">
+        <path d="M50 85 C50 85 5 55 5 28 C5 15 14 5 26 5 C35 5 43 10 50 20 C57 10 65 5 74 5 C86 5 95 15 95 28 C95 55 50 85 50 85Z"/>
+      </svg>
+    </div>
+    <p class="loader-text">carregando nossa história...</p>
+  </div>
+
+  <!-- ░░ CANVAS DE PARTÍCULAS ░░ -->
+  <canvas id="particles-canvas" aria-hidden="true"></canvas>
+
+  <!-- ░░ BOTÃO TOPO ░░ -->
+  <button id="back-to-top" aria-label="Voltar ao topo" title="Voltar ao topo">↑</button>
+
+  <!-- ░░ CONTROLES FLUTUANTES ░░ -->
+  <div class="float-controls" role="toolbar" aria-label="Controles">
+    <button id="music-toggle" class="ctrl-btn" aria-label="Tocar música">♪</button>
+    <button id="theme-toggle" class="ctrl-btn" aria-label="Alternar tema">◐</button>
+  </div>
+
+  <!-- ░░ ÁUDIO AMBIENTE ░░ -->
+  <audio id="ambient-audio" loop>
+    <!-- Adicione o caminho para um arquivo de áudio se desejar -->
+    <!-- <source src="audio/ambient.mp3" type="audio/mpeg"> -->
+  </audio>
+
+  <main>
+
+    <!-- ═══════════════════════════════════════════
+         1. HERO
+    ═══════════════════════════════════════════ -->
+    <section id="hero" class="section section--hero">
+      <div class="hero-inner">
+        <span class="hero-eyebrow fade-up">para você,</span>
+        <h1 class="hero-name fade-up delay-1">Victoria</h1>
+        <p class="hero-subtitle fade-up delay-2">
+          Você é a frase que eu nunca soube que precisava escrever.
+        </p>
+        <p class="hero-date fade-up delay-3">01 de janeiro de 2026</p>
+        <a href="#counter" class="hero-cta fade-up delay-4 scroll-link">
+          Começar nossa história
+          <span class="cta-arrow">↓</span>
+        </a>
+      </div>
+      <div class="hero-scroll-hint" aria-hidden="true">role para baixo</div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         2. CONTADOR
+    ═══════════════════════════════════════════ -->
+    <section id="counter" class="section section--counter reveal">
+      <div class="container">
+        <span class="section-label">desde o começo</span>
+        <h2 class="section-title">Estamos escrevendo nossa história há</h2>
+        <div class="counter-grid" id="counter-grid">
+          <div class="counter-card">
+            <span class="counter-value" id="c-years">0</span>
+            <span class="counter-unit">anos</span>
+          </div>
+          <div class="counter-card">
+            <span class="counter-value" id="c-months">0</span>
+            <span class="counter-unit">meses</span>
+          </div>
+          <div class="counter-card">
+            <span class="counter-value" id="c-days">0</span>
+            <span class="counter-unit">dias</span>
+          </div>
+          <div class="counter-card">
+            <span class="counter-value" id="c-hours">0</span>
+            <span class="counter-unit">horas</span>
+          </div>
+          <div class="counter-card">
+            <span class="counter-value" id="c-minutes">0</span>
+            <span class="counter-unit">minutos</span>
+          </div>
+        </div>
+        <p class="counter-note">e cada minuto valeu a pena.</p>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         3. NOSSA HISTÓRIA (TIMELINE)
+    ═══════════════════════════════════════════ -->
+    <section id="timeline" class="section section--timeline reveal">
+      <div class="container">
+        <span class="section-label">nossa história</span>
+        <h2 class="section-title">Os capítulos que mais importam</h2>
+        <div class="timeline">
+
+          <div class="timeline-item reveal-left">
+            <div class="timeline-dot" aria-hidden="true">✦</div>
+            <div class="timeline-card">
+              <span class="timeline-date">01 de janeiro de 2024</span>
+              <h3 class="timeline-title">O começo de tudo</h3>
+              <p class="timeline-desc">O dia em que você entrou na minha vida e tudo fez mais sentido. Uma conversa que mudou a direção de tudo.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal-right">
+            <div class="timeline-dot" aria-hidden="true">♡</div>
+            <div class="timeline-card">
+              <span class="timeline-date">RioMar Shopping</span>
+              <h3 class="timeline-title">Nosso primeiro encontro</h3>
+              <p class="timeline-desc">Eu nunca fui tão feliz em um shopping na vida. Cada segundo ao seu lado foi exatamente como eu esperava e melhor.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal-left">
+            <div class="timeline-dot" aria-hidden="true">★</div>
+            <div class="timeline-card">
+              <span class="timeline-date">Setembro de 2025</span>
+              <h3 class="timeline-title">Oficialmente nossos</h3>
+              <p class="timeline-desc">O momento em que a gente decidiu que era de verdade. Que era pra valer. Que era nós dois.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal-right">
+            <div class="timeline-dot" aria-hidden="true">🏠</div>
+            <div class="timeline-card">
+              <span class="timeline-date">Um dia inesquecível</span>
+              <h3 class="timeline-title">A primeira vez que você dormiu aqui</h3>
+              <p class="timeline-desc">Mágico. Só consigo usar essa palavra. Ter você aqui, dentro do meu mundo, foi uma das melhores sensações que já tive.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal-left">
+            <div class="timeline-dot" aria-hidden="true">✦</div>
+            <div class="timeline-card">
+              <span class="timeline-date">Natal 2025</span>
+              <h3 class="timeline-title">Nosso primeiro Natal juntos</h3>
+              <p class="timeline-desc">Mil maravilhas. Você ao meu lado nessa data tão especial foi um presente que eu não pedi mas mereço muito.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal-right">
+            <div class="timeline-dot" aria-hidden="true">✈</div>
+            <div class="timeline-card">
+              <span class="timeline-date">14 de fevereiro de 2026</span>
+              <h3 class="timeline-title">Nossa primeira viagem juntos</h3>
+              <p class="timeline-desc">Simplesmente incrível. Ver o mundo ao seu lado é diferente, tudo fica mais bonito, mais vivo, mais real.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal-left">
+            <div class="timeline-dot" aria-hidden="true">♡</div>
+            <div class="timeline-card">
+              <span class="timeline-date">01 de janeiro de 2026</span>
+              <h3 class="timeline-title">Nosso aniversário de namoro</h3>
+              <p class="timeline-desc">O dia em que celebramos o que construímos. Você, eu, e tudo que ainda vem por aí.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         4. GALERIA
+    ═══════════════════════════════════════════ -->
+    <section id="gallery" class="section section--gallery reveal">
+      <div class="container">
+        <span class="section-label">nossas memórias</span>
+        <h2 class="section-title">Momentos que guardo com carinho</h2>
+        
+        <div class="gallery-grid" id="gallery-grid">
+
+          <!-- Foto 1 -->
+         <div class="gallery-item" data-caption="Nosso encontro no RioMar - 2025" data-date="2024">
+    <img src="img/foto1.jpg" alt="Nosso primeiro encontro">
+</div>
+
+          <!-- Foto 2 -->
+          <div class="gallery-item" data-caption="Nossa primeira viagem — 14/02/2026" data-date="2026">
+            <img src="img/foto2.jpg" alt=""Nossa primeira viagem">
+          </div>
+
+          <!-- Foto 3 -->
+          <div class="gallery-item" data-caption="Natal juntos — 2025" data-date="2025">
+           <img src="img/foto3.jpg" alt="Nosso Natal juntos">
+          </div>
+
+          <!-- Foto 4 -->
+          <div class="gallery-item" data-caption="Momentos com você" data-date="2024">
+            <img src="img/foto4.jpg" alt="Nossos momentos">
+          </div>
+
+          <!-- Foto 5 -->
+          <div class="gallery-item gallery-item--tall" data-caption="Algum dia ai com Você" data-date="2025">
+            <img src="img/foto5.jpg" alt="Um dia massa">
+          </div>
+
+          <!-- Foto 6 -->
+          <div class="gallery-item" data-caption="Sempre você" data-date="2026">
+            <img src="img/foto6.jpg" alt="Sempre Você">
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Lightbox -->
+      <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Visualizar foto">
+        <button class="lightbox-close" id="lightbox-close" aria-label="Fechar">✕</button>
+        <div class="lightbox-content">
+          <img id="lightbox-img" src="" alt="" />
+          <p id="lightbox-caption"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         5. RAZÕES PELAS QUAIS EU TE AMO
+    ═══════════════════════════════════════════ -->
+    <section id="reasons" class="section section--reasons reveal">
+      <div class="container">
+        <span class="section-label">por que te amo</span>
+        <h2 class="section-title">Só alguns dos mil motivos</h2>
+        <div class="reasons-grid" id="reasons-grid">
+
+          <div class="reason-card" data-message="Quando você sorri, o mundo inteiro fica mais bonito. Não consigo não sorrir também.">
+            <div class="reason-front">
+              <span class="reason-icon">☀</span>
+              <h3>Seu sorriso</h3>
+            </div>
+            <div class="reason-back">
+              <p>Quando você sorri, o mundo inteiro fica mais bonito. Não consigo não sorrir também.</p>
+            </div>
+          </div>
+
+          <div class="reason-card" data-message="Ao seu lado, tudo parece mais leve. Sua companhia é o meu lugar favorito no mundo.">
+            <div class="reason-front">
+              <span class="reason-icon">✦</span>
+              <h3>Sua companhia</h3>
+            </div>
+            <div class="reason-back">
+              <p>Ao seu lado, tudo parece mais leve. Sua companhia é o meu lugar favorito no mundo.</p>
+            </div>
+          </div>
+
+          <div class="reason-card" data-message="Você tem um jeito único de ser que eu não encontro em mais ninguém. É completamente seu.">
+            <div class="reason-front">
+              <span class="reason-icon">♡</span>
+              <h3>Seu jeito</h3>
+            </div>
+            <div class="reason-back">
+              <p>Você tem um jeito único de ser que eu não encontro em mais ninguém. É completamente seu.</p>
+            </div>
+          </div>
+
+          <div class="reason-card" data-message="Sua força me inspira todos os dias. Você não desiste, e isso me faz querer ser melhor.">
+            <div class="reason-front">
+              <span class="reason-icon">⚡</span>
+              <h3>Sua força</h3>
+            </div>
+            <div class="reason-back">
+              <p>Sua força me inspira todos os dias. Você não desiste, e isso me faz querer ser melhor.</p>
+            </div>
+          </div>
+
+          <div class="reason-card" data-message="Seu carinho é genuíno e sincero. Cada gesto seu tem peso, tem valor, tem você.">
+            <div class="reason-front">
+              <span class="reason-icon">★</span>
+              <h3>Seu carinho</h3>
+            </div>
+            <div class="reason-back">
+              <p>Seu carinho é genuíno e sincero. Cada gesto seu tem peso, tem valor, tem você.</p>
+            </div>
+          </div>
+
+          <div class="reason-card" data-message="A forma como você me olha faz eu sentir que sou importante. E você me faz querer ser.">
+            <div class="reason-front">
+              <span class="reason-icon">◆</span>
+              <h3>Seu olhar</h3>
+            </div>
+            <div class="reason-back">
+              <p>A forma como você me olha faz eu sentir que sou importante. E você me faz querer ser.</p>
+            </div>
+          </div>
+
+        </div>
+        <p class="reasons-hint">clique nos cards para revelar a mensagem</p>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         6. CARTA DIGITAL
+    ═══════════════════════════════════════════ -->
+    <section id="letter" class="section section--letter reveal">
+      <div class="container container--narrow">
+        <span class="section-label">carta</span>
+        <div class="letter-paper">
+          <div class="letter-header">
+            <span class="letter-from">De Gabriel,</span>
+            <span class="letter-to">Para Victoria</span>
+          </div>
+          <div class="letter-body" id="letter-body">
+            <p>Victoria,</p>
+            <p>Eu poderia escrever durante horas tentando descrever o que você representa pra mim, e ainda assim acho que as palavras não dariam conta.</p>
+            <p>Mas vou tentar.</p>
+            <p>Desde que você entrou na minha vida, no início de 2024, eu aprendi que algumas pessoas chegam e simplesmente ficam, não porque precisam, mas porque querem. E você quis. E eu fico grato por isso todos os dias.</p>
+            <p>Nosso primeiro encontro no RioMar ficou gravado na minha memória de um jeito que eu não consigo explicar. Eu nunca fui tão feliz dentro de um shopping na vida. Era você. Só podia ser você.</p>
+            <p>A primeira vez que você dormiu aqui foi mágica. Ter você no meu mundo, no meu espaço, foi um dos momentos mais bonitos que eu já vivi.</p>
+            <p>E nosso Natal juntos... mil maravilhas é pouco.</p>
+            <p>Nossa primeira viagem, em fevereiro de 2026, foi simplesmente incrível. Ver o mundo ao seu lado é diferente, tudo fica mais colorido, mais intenso, mais real.</p>
+            <p>Eu não sei o que o futuro vai trazer. Mas sei que quero estar ao seu lado enquanto ele chega.</p>
+            <p>Este site vai existir enquanto existir internet. Assim como as minhas memórias de nós.</p>
+            <p>Com amor,</p>
+          </div>
+          <div class="letter-signature">
+            Gabriel
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         7. PLAYLIST
+    ═══════════════════════════════════════════ -->
+    <section id="playlist" class="section section--playlist reveal">
+      <div class="container">
+        <span class="section-label">nossa trilha sonora</span>
+        <h2 class="section-title">As músicas que nos definem</h2>
+        <div class="playlist-container">
+
+          <!-- Player principal -->
+          <div class="player-card" id="main-player">
+            <div class="player-disc" id="player-disc" aria-hidden="true">♪</div>
+            <div class="player-info">
+              <span class="player-now">tocando</span>
+              <h3 class="player-song" id="player-song-name">This I Love</h3>
+              <p class="player-artist" id="player-artist">Guns N' Roses</p>
+            </div>
+          </div>
+
+          <!-- Lista de músicas -->
+          <ul class="track-list" id="track-list" role="list">
+            <li class="track-item active" data-song="Enquanto Houver Razões" data-artist="Jorge & Mateus" role="listitem">
+              <span class="track-num">01</span>
+              <div class="track-info">
+                <span class="track-name">Enquanto Houver Razões</span>
+                <span class="track-artist">Jorge & Mateus</span>
+              </div>
+              <span class="track-playing" aria-hidden="true">♪</span>
+            </li>
+            <li class="track-item" data-song="This I Love" data-artist="Guns N' Roses" role="listitem">
+              <span class="track-num">02</span>
+              <div class="track-info">
+                <span class="track-name">This I Love</span>
+                <span class="track-artist">Guns N' Roses</span>
+              </div>
+            </li>
+            <li class="track-item" data-song="Perfect" data-artist="Marisa Monte" role="listitem">
+              <span class="track-num">03</span>
+              <div class="track-info">
+                <span class="track-name">Ainda Bem</span>
+                <span class="track-artist">Marisa Monte</span>
+              </div>
+            </li>
+            <li class="track-item" data-song="All of Me" data-artist="John Legend" role="listitem">
+              <span class="track-num">04</span>
+              <div class="track-info">
+                <span class="track-name">All of Me</span>
+                <span class="track-artist">John Legend</span>
+              </div>
+            </li>
+            <li class="track-item" data-song="A Thousand Years" data-artist="Dragon Ball GT" role="listitem">
+              <span class="track-num">05</span>
+              <div class="track-info">
+                <span class="track-name">Sorriso Resplandecente</span>
+                <span class="track-artist">Dragon Ball GT</span>
+              </div>
+            </li>
+          </ul>
+
+          <!-- Embed Spotify (opcional) -->
+          <div class="spotify-embed">
+            <p class="spotify-hint">
+              Cole abaixo o embed do Spotify com a sua playlist favorita:
+            </p>
+           <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0LT3EBJooqLMqPpxXMcnx0?utm_source=generator&si=3f97a8f776db4b2f" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         8. FRASES — CARROSSEL
+    ═══════════════════════════════════════════ -->
+    <section id="quotes" class="section section--quotes reveal">
+      <div class="container container--narrow">
+        <span class="section-label">palavras que guardo</span>
+        <div class="carousel" id="carousel" role="region" aria-label="Frases e memórias">
+          <div class="carousel-track" id="carousel-track">
+
+            <div class="carousel-slide active" role="group" aria-label="Frase 1 de 7">
+              <blockquote>"O amor não é olhar um para o outro, é olhar juntos na mesma direção."</blockquote>
+              <cite>— Antoine de Saint-Exupéry</cite>
+            </div>
+
+            <div class="carousel-slide" role="group" aria-label="Frase 2 de 7">
+              <blockquote>"Lembro quando te vi pela primeira vez no RioMar e pensei: esse sorriso vai ser um problema."</blockquote>
+              <cite>— Gabriel</cite>
+            </div>
+
+            <div class="carousel-slide" role="group" aria-label="Frase 3 de 7">
+              <blockquote>"Nossa primeira viagem juntos me mostrou que o mundo é mais bonito quando você está do meu lado."</blockquote>
+              <cite>— Gabriel, fevereiro de 2026</cite>
+            </div>
+
+            <div class="carousel-slide" role="group" aria-label="Frase 4 de 7">
+              <blockquote>"Em você encontrei um lugar que não existe no mapa — mas que eu volto toda vez que preciso de paz."</blockquote>
+              <cite>— Gabriel</cite>
+            </div>
+
+            <div class="carousel-slide" role="group" aria-label="Frase 5 de 7">
+              <blockquote>"Amar você nunca foi difícil. Difícil é imaginar como eu vivia antes."</blockquote>
+              <cite>— Gabriel</cite>
+            </div>
+
+            <div class="carousel-slide" role="group" aria-label="Frase 6 de 7">
+              <blockquote>"Aquele Natal de 2025 com você... mil maravilhas é pouco."</blockquote>
+              <cite>— Gabriel/cite>
+            </div>
+
+            <div class="carousel-slide" role="group" aria-label="Frase 7 de 7">
+              <blockquote>"E se a vida me perguntar o que foi melhor nesses anos, eu vou falar seu nome."</blockquote>
+              <cite>— Gabriel</cite>
+            </div>
+
+          </div>
+          <div class="carousel-nav" role="tablist" aria-label="Navegação do carrossel">
+            <button class="carousel-dot active" role="tab" aria-selected="true" aria-label="Frase 1"></button>
+            <button class="carousel-dot" role="tab" aria-label="Frase 2"></button>
+            <button class="carousel-dot" role="tab" aria-label="Frase 3"></button>
+            <button class="carousel-dot" role="tab" aria-label="Frase 4"></button>
+            <button class="carousel-dot" role="tab" aria-label="Frase 5"></button>
+            <button class="carousel-dot" role="tab" aria-label="Frase 6"></button>
+            <button class="carousel-dot" role="tab" aria-label="Frase 7"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         9. MAPA DE MEMÓRIAS
+    ═══════════════════════════════════════════ -->
+    <section id="places" class="section section--places reveal">
+      <div class="container">
+        <span class="section-label">lugares nossos</span>
+        <h2 class="section-title">Onde construímos nossas memórias</h2>
+        <div class="places-grid">
+
+          <div class="place-card">
+            <div class="place-icon" aria-hidden="true">🛍</div>
+            <h3 class="place-name">RioMar Shopping</h3>
+            <p class="place-desc">O lugar onde tudo começou de verdade. Onde eu finalmente te vi e percebi que não tinha como voltar atrás.</p>
+            <span class="place-tag">primeiro encontro</span>
+          </div>
+
+          <div class="place-card">
+            <div class="place-icon" aria-hidden="true">🏠</div>
+            <h3 class="place-name">Minha Casa</h3>
+            <p class="place-desc">Quando você dormiu aqui pela primeira vez, esse lugar ganhou um novo significado. Ficou com a sua energia.</p>
+            <span class="place-tag">mágico</span>
+          </div>
+
+          <div class="place-card">
+            <div class="place-icon" aria-hidden="true">✈</div>
+            <h3 class="place-name">Nossa Primeira Viagem</h3>
+            <p class="place-desc">Fevereiro de 2026. O mundo ficou menor e ao mesmo tempo infinito quando estávamos juntos nele.</p>
+            <span class="place-tag">14/02/2026</span>
+          </div>
+
+          <div class="place-card">
+            <div class="place-icon" aria-hidden="true">🎄</div>
+            <h3 class="place-name">Nosso Natal</h3>
+            <p class="place-desc">Dezembro de 2025. A melhor companhia possível pra uma das datas mais especiais do ano.</p>
+            <span class="place-tag">natal 2025</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         10. CÁPSULA DO TEMPO
+    ═══════════════════════════════════════════ -->
+    <section id="capsule" class="section section--capsule reveal">
+      <div class="container container--narrow">
+        <span class="section-label">para o futuro</span>
+        <h2 class="section-title">Cápsula do Tempo</h2>
+        <p class="capsule-intro">Uma mensagem guardada para quando você ler isso daqui alguns anos.</p>
+        <div class="capsule-box" id="capsule-box">
+          <div class="capsule-closed" id="capsule-closed">
+            <div class="capsule-envelope" aria-hidden="true">
+              <div class="envelope-flap"></div>
+              <div class="envelope-body">
+                <span>✉</span>
+              </div>
+            </div>
+            <button class="capsule-btn" id="capsule-btn">Abrir mensagem do futuro</button>
+          </div>
+          <div class="capsule-open" id="capsule-open" hidden>
+            <p>Victoria,</p>
+            <p>Se você está lendo isso, então é porque nós chegamos até aqui. E isso, por si só, já é suficiente pra me deixar feliz.</p>
+            <p>Quero que você saiba que em cada versão do futuro que eu imagino, você está lá. Viajando, crescendo, construindo, sempre juntos.</p>
+            <p>Obrigado por escolher ficar. Por escolher nós. Por escolher isso que estamos construindo.</p>
+            <p>O Gabriel do passado te ama. E tenho certeza que o do futuro também.</p>
+            <p class="capsule-sign">— Gabriel, com amor ♡</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         11. MOTIVOS ALEATÓRIOS
+    ═══════════════════════════════════════════ -->
+    <section id="random-reason" class="section section--random reveal">
+      <div class="container container--narrow">
+        <span class="section-label">um motivo a mais</span>
+        <h2 class="section-title">Por que te amo, hoje</h2>
+        <div class="random-box">
+          <p class="random-text" id="random-text">
+            Porque ao seu lado, eu sou a melhor versão de mim mesmo.
+          </p>
+          <button class="random-btn" id="random-btn">Me dê mais um motivo ♡</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         12. MENSAGEM SURPRESA
+    ═══════════════════════════════════════════ -->
+    <section id="surprise" class="section section--surprise reveal">
+      <div class="container container--narrow">
+        <div class="surprise-box">
+          <p class="surprise-tease">psst...</p>
+          <button class="surprise-btn" id="surprise-btn">Não clique aqui 👀</button>
+          <div class="surprise-message" id="surprise-message" hidden>
+            <div class="surprise-heart" aria-hidden="true">♡</div>
+            <p>Eu poderia fingir que não queria que você clicasse aqui...</p>
+            <p>...mas a verdade é que eu preparei isso exatamente pra você.</p>
+            <p><strong>Você é a coisa mais bonita que já aconteceu pra mim.</strong></p>
+            <p>Obrigado por existir, Victoria.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         13. SONHOS JUNTOS
+    ═══════════════════════════════════════════ -->
+    <section id="dreams" class="section section--dreams reveal">
+      <div class="container">
+        <span class="section-label">o que está por vir</span>
+        <h2 class="section-title">Sonhos que quero realizar com você</h2>
+        <div class="dreams-grid">
+
+          <div class="dream-card">
+            <span class="dream-num">01</span>
+            <h3>Viajar o mundo</h3>
+            <p>Cada novo lugar fica melhor quando explorado com você. Temos muito chão pra percorrer juntos.</p>
+          </div>
+
+          <div class="dream-card">
+            <span class="dream-num">02</span>
+            <h3>Construir nosso lar</h3>
+            <p>Um lugar que seja nosso, de verdade. Cheio de histórias, cheiros e memórias que só nós dois sabemos.</p>
+          </div>
+
+          <div class="dream-card">
+            <span class="dream-num">03</span>
+            <h3>Crescer juntos</h3>
+            <p>Ser melhor a cada ano. Aprender, errar, tentar de novo — sempre de mãos dadas.</p>
+          </div>
+
+          <div class="dream-card">
+            <span class="dream-num">04</span>
+            <h3>Criar novas memórias</h3>
+            <p>Cada data, cada surpresa, cada descoberta. Nossa história ainda tem muitos capítulos pela frente.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         14. MENSAGEM FINAL
+    ═══════════════════════════════════════════ -->
+    <section id="final-message" class="section section--final reveal">
+      <div class="container container--narrow">
+        <div class="final-inner">
+          <p class="final-quote">"Se eu pudesse escolher mil vezes,<br>escolheria você em todas elas."</p>
+          <div class="final-divider" aria-hidden="true">✦</div>
+          <p class="final-sub">Este site continuará existindo enquanto existir internet.<br>Assim como minhas lembranças de nós.</p>
+          <p class="final-sign">Com amor,<br><span class="final-name">Gabriel</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         15. TELA FINAL
+    ═══════════════════════════════════════════ -->
+    <section id="end-screen" class="section section--end reveal">
+      <div class="container container--narrow">
+        <div class="end-heart" id="end-heart" aria-hidden="true">♡</div>
+        <h2 class="end-title">Obrigado por fazer parte<br>da minha vida.</h2>
+        <p class="end-sub">Victoria &amp; Gabriel — desde 2024</p>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
